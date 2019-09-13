@@ -17,12 +17,15 @@
                 </div>
             </div>
             <div class="app-body-tabs">
-                <a class="app-body-tab">Example</a>
+                <a class="app-body-tab app-body-tab-active">Example</a>
                 <a class="app-body-tab" href="#">Install</a>
                 <a class="app-body-tab" href="https://codemirror.net/" target="_blank">CodeMirror</a>
                 <a class="app-body-tab" href="https://codemirror.net/demo/theme.html" target="_blank">Theme</a>
                 <a class="app-body-tab" href="https://codemirror.net/mode/index.html" target="_blank">Language</a>
                 <a class="app-body-tab" target="_blank">Github</a>
+            </div>
+            <div class="app-body-examples">
+                <demo1-basic-usage/>
             </div>
         </div>
         <div class="app-foot">
@@ -33,8 +36,11 @@
 
 <script>
 
+    import Demo1BasicUsage from "./demo/demo1-basic-usage";
+
     export default {
         name: 'app',
+        components: {Demo1BasicUsage},
     }
 </script>
 
@@ -102,16 +108,32 @@
                     padding: 9px 16px;
                     text-decoration: none;
                     color: #333;
+                    border-radius: 3px;
+
+                    &:not(:last-child) {
+                        margin-right: 16px;
+                    }
 
                     &:hover {
-                        border-radius: 3px;
                         background-color: #f6f6f6;
                     }
 
                     &:active {
                         background: #e2e2e2;
                     }
+
+                    &.app-body-tab-active {
+                        background-color: #12b4a5;
+                        color: white;
+                    }
                 }
+            }
+
+            .app-body-examples {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
             }
         }
     }
