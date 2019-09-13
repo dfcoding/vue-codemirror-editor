@@ -6,13 +6,6 @@
 <script>
     import CodeMirror from 'codemirror'
     import 'codemirror/lib/codemirror.css'
-    import 'codemirror/theme/monokai.css'
-
-    import 'codemirror/mode/xml/xml'
-    import 'codemirror/mode/javascript/javascript'
-    import 'codemirror/mode/css/css'
-    import 'codemirror/mode/htmlmixed/htmlmixed'
-    import 'codemirror/addon/selection/active-line'
 
     export default {
         name: "vue-codemirror-editor",
@@ -32,14 +25,6 @@
                 p_value: this.value || '',
                 p_defaultOption: {
                     lineNumbers: true,
-                    styleActiveLine: true,
-                    selectionPointer: true,
-                    highlightDifferences: true,
-                    connect: true,
-                    revertButtons: true,
-                    indentUnit: 4,
-                    theme: 'monokai',
-                    readOnly: false,
                 }
             }
         },
@@ -55,5 +40,12 @@
 </script>
 
 <style lang="scss">
+    .vue-codemirror-editor {
+        height: 100%;
+        width: 100%;
 
+        & > div {
+            height: 100%;
+        }
+    }
 </style>
