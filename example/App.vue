@@ -101,10 +101,10 @@
                 align-items: center;
                 justify-content: center;
                 padding: 9px 0;
-                cursor: pointer;
                 user-select: none;
 
                 .app-body-tab {
+                    cursor: pointer;
                     padding: 9px 16px;
                     text-decoration: none;
                     color: #333;
