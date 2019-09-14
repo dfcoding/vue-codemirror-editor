@@ -27,6 +27,7 @@
             <div class="app-body-examples">
                 <demo1-basic-usage/>
                 <demo2-theme/>
+                <demo3-vue/>
             </div>
         </div>
         <div class="app-foot">
@@ -39,10 +40,11 @@
 
     import Demo1BasicUsage from "./demo/demo1-basic-usage";
     import Demo2Theme from "./demo/demo2-theme";
+    import Demo3Vue from "./demo/demo3-vue";
 
     export default {
         name: 'app',
-        components: {Demo2Theme, Demo1BasicUsage},
+        components: {Demo3Vue, Demo2Theme, Demo1BasicUsage},
     }
 </script>
 

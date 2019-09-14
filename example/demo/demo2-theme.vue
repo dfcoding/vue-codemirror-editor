@@ -1,9 +1,9 @@
 <template>
-    <demo-card title="<code> Theme: monikai, Mode: text/html">
+    <demo-card title="<code> Theme: base16-dark, Mode: text/html">
         <vue-codemirror-editor
                 v-model="code"
                 :option="{
-                    theme:'monokai',
+                    theme:'base16-dark',
                     mode:'text/html',
                 }"/>
     </demo-card>
@@ -11,7 +11,7 @@
 
 <script>
 
-    import 'codemirror/theme/monokai.css'
+    import 'codemirror/theme/base16-dark.css'
 
     const code =
         `<!DOCTYPE html>
