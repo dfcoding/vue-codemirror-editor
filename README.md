@@ -1,21 +1,28 @@
-# vue-codemirror-editor
+# Vue-Codemirror-Editor
 
-> vue component base on codemirror
+A vue component base on codemirror
 
-## Build Setup
+一个基于Vue以及Codemirror的代码编辑器
 
-``` bash
-# install dependencies
-npm install
+[Demo Page](http://martsforever.gitee.io/vue-codemirror-editor/)
 
-# serve with hot reload at localhost:8080
-npm run dev
+# Install
 
-# build for production with minification
-npm run build
-
-# build for production and view the bundle analyzer report
-npm run build --report
+```
+npm i vue-codemirror-editor -S
 ```
 
-For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+# Basic Usage
+
+```javascript
+import Vue from 'vue'
+import VueCodemirrorEditor from 'vue-codemirror-editor'
+import 'vue-codemirror-editor/dist/vue-codemirror-editor.css'
+Vue.use(VueCodemirrorEditor)
+```
+
+# More Example
+
+[Demo Page](http://martsforever.gitee.io/vue-codemirror-editor/)
+
+

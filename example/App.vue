@@ -17,12 +17,12 @@
         </div>
       </div>
       <div class="app-body-tabs">
-        <a class="app-body-tab app-body-tab-active">Example</a>
-        <a class="app-body-tab" href="#">Install</a>
+        <a class="app-body-tab app-body-tab-active" href="http://martsforever.gitee.io/vue-codemirror-editor/">Example</a>
+        <a class="app-body-tab" href="https://www.npmjs.com/package/vue-codemirror-editor">Install</a>
         <a class="app-body-tab" href="https://codemirror.net/" target="_blank">CodeMirror</a>
         <a class="app-body-tab" href="https://codemirror.net/demo/theme.html" target="_blank">Theme</a>
         <a class="app-body-tab" href="https://codemirror.net/mode/index.html" target="_blank">Language</a>
-        <a class="app-body-tab" target="_blank">Github</a>
+        <a class="app-body-tab" target="https://gitee.com/martsforever/vue-codemirror-editor">Gitee</a>
       </div>
       <div class="app-body-examples">
         <demo1-basic-usage/>
