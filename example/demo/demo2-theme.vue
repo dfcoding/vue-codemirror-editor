@@ -1,10 +1,17 @@
 <template>
-    <demo-card title="<code> Basic Usage">
-        <vue-codemirror-editor v-model="code"/>
+    <demo-card title="<code> Theme: monikai, Mode: text/html">
+        <vue-codemirror-editor
+                v-model="code"
+                :option="{
+                    theme:'monokai',
+                    mode:'text/html',
+                }"/>
     </demo-card>
 </template>
 
 <script>
+
+    import 'codemirror/theme/monokai.css'
 
     const code =
         `<!DOCTYPE html>
@@ -14,6 +21,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
 <link rel="icon" href="<%= BASE_URL %>favicon.ico">
+
 <title>vue-codemirror-editor</title>
 </head>
 <body>
@@ -25,7 +33,7 @@
 </html>`
 
     export default {
-        name: "demo1-basic-usage",
+        name: "demo2-theme",
         data() {
             return {
                 code,

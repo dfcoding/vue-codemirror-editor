@@ -26,6 +26,7 @@
             </div>
             <div class="app-body-examples">
                 <demo1-basic-usage/>
+                <demo2-theme/>
             </div>
         </div>
         <div class="app-foot">
@@ -37,10 +38,11 @@
 <script>
 
     import Demo1BasicUsage from "./demo/demo1-basic-usage";
+    import Demo2Theme from "./demo/demo2-theme";
 
     export default {
         name: 'app',
-        components: {Demo1BasicUsage},
+        components: {Demo2Theme, Demo1BasicUsage},
     }
 </script>
 
@@ -81,7 +83,7 @@
                     width: fit-content;
                     display: inline-flex;
                     flex-direction: column;
-                    align-items: flex-end;
+                    align-items: center;
                 }
 
                 .app-body-desc-title {
@@ -134,6 +136,10 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+
+                & > div {
+                    margin-bottom: 20px;
+                }
             }
         }
     }

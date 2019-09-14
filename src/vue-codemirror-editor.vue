@@ -7,6 +7,9 @@
     import CodeMirror from 'codemirror'
     import 'codemirror/lib/codemirror.css'
 
+    import 'codemirror/mode/htmlmixed/htmlmixed'
+    import 'codemirror/addon/selection/active-line.js'
+
     export default {
         name: "vue-codemirror-editor",
         props: {
@@ -25,6 +28,7 @@
                 p_value: this.value || '',
                 p_defaultOption: {
                     lineNumbers: true,
+                    styleActiveLine: true,
                 }
             }
         },

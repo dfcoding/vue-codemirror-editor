@@ -23,11 +23,17 @@
     .demo-card {
         border-radius: 3px;
         overflow: hidden;
-        border: 1px solid #eee;
+        border: solid 1px #12b4a5;
+
         .demo-card-head {
-            background-color: #f6f6f6;
+            background-color: #12b4a5;
             padding: 9px 28px;
-            color: #3E97EC;
+            color: white;
+
+            &:hover {
+                text-decoration: underline;
+                cursor: pointer;
+            }
         }
 
         .demo-card-body {
