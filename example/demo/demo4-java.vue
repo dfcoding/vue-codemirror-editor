@@ -1,5 +1,5 @@
 <template>
-    <demo-card title="<code> Theme: idea, Mode: text/x-java" href="https://gitee.com/martsforever/vue-codemirror-editor/blob/master/example/demo/demo4-java.vue">
+    <demo-card title="<code> Theme: idea, Mode: text/x-java" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo4-java.vue">
         <vue-codemirror-editor
                 v-model="code"
                 :option="{

@@ -1,5 +1,5 @@
 <template>
-    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" href="https://gitee.com/martsforever/vue-codemirror-editor/blob/master/example/demo/demo5-xml.vue">
+    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo5-xml.vue">
         <vue-codemirror-editor
                 v-model="code"
                 :option="{

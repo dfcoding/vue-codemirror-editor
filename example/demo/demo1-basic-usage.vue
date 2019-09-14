@@ -1,5 +1,5 @@
 <template>
-    <demo-card title="<code> Basic Usage" href="https://gitee.com/martsforever/vue-codemirror-editor/blob/master/example/demo/demo1-basic-usage.vue">
+    <demo-card title="<code> Basic Usage" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo1-basic-usage.vue">
         <vue-codemirror-editor v-model="code"/>
     </demo-card>
 </template>
