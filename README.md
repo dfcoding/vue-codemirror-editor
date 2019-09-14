@@ -1,29 +1,26 @@
-# vue-codemirror-editor
+# Vue-Codemirror-Editor
 
-## Project setup
-```
-npm install
-```
+A vue component base on codemirror
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+一个基于Vue以及Codemirror的代码编辑器
 
-### Compiles and minifies for production
+[Demo Page]()
+
+# Install
+
 ```
-npm run build
+npm i vue-codemirror-editor -S
 ```
 
-### Run your tests
-```
-npm run test
+# Basic Usage
+
+```javascript
+import Vue from 'vue'
+import VueCodemirrorEditor from 'vue-codemirror-editor'
+import 'vue-codemirror-editor/dist/vue-codemirror-editor.css'
+Vue.use(VueCodemirrorEditor)
 ```
 
-### Lints and fixes files
-```
-npm run lint
-```
+# More Example
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
