@@ -1,5 +1,5 @@
 <template>
-    <demo-card title="<code> Theme: base16-dark, Mode: text/html">
+    <demo-card title="<code> Theme: base16-dark, Mode: text/html" href="https://gitee.com/martsforever/vue-codemirror-editor/blob/master/example/demo/demo2-theme.vue">
         <vue-codemirror-editor
                 v-model="code"
                 :option="{

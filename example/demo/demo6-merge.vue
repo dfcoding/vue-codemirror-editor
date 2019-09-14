@@ -1,5 +1,5 @@
 <template>
-    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" class="demo6-merge">
+    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" class="demo6-merge" href="https://gitee.com/martsforever/vue-codemirror-editor/blob/master/example/demo/demo6-merge.vue">
         <vue-codemirror-editor
                 v-model="code"
                 merge

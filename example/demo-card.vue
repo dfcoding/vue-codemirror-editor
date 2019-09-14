@@ -1,7 +1,7 @@
 <template>
   <div class="demo-card">
     <div class="demo-card-head">
-      <a :href="href">{{title}}</a>
+      <a :href="href" target="_blank">{{title}}</a>
     </div>
     <div class="demo-card-body">
       <slot></slot>
@@ -28,7 +28,11 @@
     .demo-card-head {
       background-color: #12b4a5;
       padding: 9px 28px;
-      color: white;
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
 
       &:hover {
         text-decoration: underline;
