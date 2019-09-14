@@ -29,6 +29,7 @@
                 <demo2-theme/>
                 <demo3-vue/>
                 <demo4-java/>
+                <demo5-xml/>
             </div>
         </div>
         <div class="app-foot">
@@ -43,10 +44,11 @@
     import Demo2Theme from "./demo/demo2-theme";
     import Demo3Vue from "./demo/demo3-vue";
     import Demo4Java from "./demo/demo4-java";
+    import Demo5Xml from "./demo/demo5-xml";
 
     export default {
         name: 'app',
-        components: {Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
+        components: {Demo5Xml, Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
     }
 </script>
 
@@ -140,6 +142,7 @@
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                padding-bottom: 300px;
 
                 & > div {
                     margin-bottom: 20px;
