@@ -4,7 +4,7 @@ A vue component base on codemirror
 
 一个基于Vue以及Codemirror的代码编辑器
 
-[Demo Page](http://martsforever.gitee.io/vue-codemirror-editor/)
+[Github Page](https://martsforever.github.io/vue-codemirror-editor/index.html)
 
 # Install
 
@@ -23,6 +23,6 @@ Vue.use(VueCodemirrorEditor)
 
 # More Example
 
-[Demo Page](http://martsforever.gitee.io/vue-codemirror-editor/)
+[Github Page](https://martsforever.github.io/vue-codemirror-editor/index.html)
 
 
