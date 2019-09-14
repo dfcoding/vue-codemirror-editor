@@ -2,7 +2,7 @@ const path = require('path')
 const resolve = (dir) => path.join(__dirname, dir)
 
 module.exports = {
-    publicPath: '/vue-codemirror-editor/',
+    publicPath: './',
     outputDir: 'page',
     pages: {
         index: {
