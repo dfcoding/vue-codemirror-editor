@@ -30,6 +30,7 @@
                 <demo3-vue/>
                 <demo4-java/>
                 <demo5-xml/>
+                <demo6-merge/>
             </div>
         </div>
         <div class="app-foot">
@@ -45,10 +46,11 @@
     import Demo3Vue from "./demo/demo3-vue";
     import Demo4Java from "./demo/demo4-java";
     import Demo5Xml from "./demo/demo5-xml";
+    import Demo6Merge from "./demo/demo6-merge";
 
     export default {
         name: 'app',
-        components: {Demo5Xml, Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
+        components: {Demo6Merge, Demo5Xml, Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
     }
 </script>
 

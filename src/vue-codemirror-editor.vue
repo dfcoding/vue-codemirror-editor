@@ -15,9 +15,25 @@
         props: {
             value: {type: String},
             option: {type: Object},
+            merge: {type: Boolean},
+            readonly: {type: Boolean},
         },
-        mounted() {
-            this.pl_initSimpleEditor()
+        watch: {
+            value: {
+                immediate: true,
+                handler(val) {
+                    if (val !== this.p_value) {
+                        this.p_value = val || ''
+                        !!this.editor && this.editor.setValue(this.p_value)
+                    }
+                },
+            },
+            readonly: {
+                immediate: true,
+                handler(val) {
+                    !!this.editor && this.editor.setOption('readOnly', val)
+                },
+            },
         },
         data() {
             return {
@@ -32,12 +48,32 @@
                 }
             }
         },
+        mounted() {
+            this.merge ? this.pl_initMergeEditor() : this.pl_initSimpleEditor()
+        },
         methods: {
+            pl_initEvent() {
+                this.editor.on('change', () => {
+                    this.p_value = this.editor.getValue()
+                    this.$emit('input', this.p_value)
+                })
+                this.editor.on('keydown', (cm, e) => this.$emit('keydown', e))
+            },
             pl_initSimpleEditor() {
                 this.cm = CodeMirror(this.$el, {
                     value: this.p_value,
                     ...Object.assign({}, this.p_defaultOption, this.option),
                 })
+                this.editor = this.cm
+                this.pl_initEvent()
+            },
+            pl_initMergeEditor() {
+                this.cm = CodeMirror.MergeView(this.$el, {
+                    value: this.p_value,
+                    ...Object.assign({}, this.p_defaultOption, this.option),
+                })
+                this.editor = this.cm.editor()
+                this.pl_initEvent()
             },
         }
     }
