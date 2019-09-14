@@ -34,7 +34,9 @@
             </div>
         </div>
         <div class="app-foot">
-
+            <div class="app-foot-content">
+                power by martsforever
+            </div>
         </div>
     </div>
 </template>
@@ -74,7 +76,20 @@
                 width: 1000px;
                 color: white;
                 font-size: 27px;
+
+                .app-foot-content {
+                    color: #333;
+                }
             }
+        }
+
+        .app-foot {
+            background-color: #f6f6f6;
+            height: 44px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #12b4a5;
         }
 
         .app-body {
