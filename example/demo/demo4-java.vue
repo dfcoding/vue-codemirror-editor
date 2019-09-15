@@ -1,21 +1,28 @@
 <template>
-    <demo-card title="<code> Theme: idea, Mode: text/x-java" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo4-java.vue">
-        <vue-codemirror-editor
-                v-model="code"
-                :option="{
+  <demo-card title="<code> Theme: idea, Mode: text/x-java" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo4-java.vue">
+    <vue-codemirror-editor
+      v-model="code"
+      :option="{
                     mode:'text/x-java',
                     theme:'idea',
                 }"/>
-    </demo-card>
+  </demo-card>
 </template>
 
 <script>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
 
-    import 'codemirror/mode/clike/clike'
-    import 'codemirror/theme/idea.css'
+  window.CodeMirror = CodeMirror
 
-    const code =
-        `package com.martsforever.plain.base.upload;
+  import 'codemirror/mode/clike/clike'
+  import 'codemirror/theme/idea.css'
+
+  const code =
+    `package com.martsforever.plain.base.upload;
 
 import com.martsforever.plain.core.basic.BasicMapper;
 import com.martsforever.plain.core.basic.BasicServiceImpl;
@@ -123,14 +130,15 @@ public class UploadServiceImpl extends BasicServiceImpl<Upload> implements Uploa
     }
 }`
 
-    export default {
-        name: "demo4-java",
-        data() {
-            return {
-                code,
-            }
-        },
-    }
+  export default {
+    name: "demo4-java",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {
+        code,
+      }
+    },
+  }
 </script>
 
 <style lang="scss">

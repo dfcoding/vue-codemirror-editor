@@ -1,13 +1,21 @@
 <template>
-    <demo-card title="<code> Basic Usage" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo1-basic-usage.vue">
-        <vue-codemirror-editor v-model="code"/>
-    </demo-card>
+  <demo-card title="<code> Basic Usage" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo1-basic-usage.vue">
+    <vue-codemirror-editor v-model="code"/>
+  </demo-card>
 </template>
 
 <script>
 
-    const code =
-        `<!DOCTYPE html>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
+
+  window.CodeMirror = CodeMirror
+
+  const code =
+    `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -24,14 +32,15 @@
 </body>
 </html>`
 
-    export default {
-        name: "demo1-basic-usage",
-        data() {
-            return {
-                code,
-            }
-        },
-    }
+  export default {
+    name: "demo1-basic-usage",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {
+        code,
+      }
+    },
+  }
 </script>
 
 <style lang="scss">

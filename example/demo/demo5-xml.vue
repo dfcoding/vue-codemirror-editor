@@ -1,21 +1,28 @@
 <template>
-    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo5-xml.vue">
-        <vue-codemirror-editor
-                v-model="code"
-                :option="{
+  <demo-card title="<code> Theme: duotone-light, Mode: application/xml" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo5-xml.vue">
+    <vue-codemirror-editor
+      v-model="code"
+      :option="{
                     mode:'application/xml',
                     theme:'duotone-light',
                 }"/>
-    </demo-card>
+  </demo-card>
 </template>
 
 <script>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
 
-    import 'codemirror/mode/xml/xml'
-    import 'codemirror/theme/duotone-light.css'
+  window.CodeMirror = CodeMirror
 
-    const code =
-        `<?xml version="1.0" encoding="UTF-8"?>
+  import 'codemirror/mode/xml/xml'
+  import 'codemirror/theme/duotone-light.css'
+
+  const code =
+    `<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
@@ -85,12 +92,13 @@
     </select>
 </mapper>`
 
-    export default {
-        name: "demo5-xml",
-        data() {
-            return {code}
-        },
-    }
+  export default {
+    name: "demo5-xml",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {code}
+    },
+  }
 </script>
 
 <style lang="scss">

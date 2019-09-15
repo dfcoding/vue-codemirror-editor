@@ -1,33 +1,40 @@
 <template>
-    <demo-card title="<code> Theme: duotone-light, Mode: application/xml" class="demo6-merge" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo6-merge.vue">
-        <vue-codemirror-editor
-                v-model="code"
-                merge
-                :option="{
+  <demo-card title="<code> Theme: duotone-light, Mode: application/xml" class="demo6-merge" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo6-merge.vue">
+    <vue-codemirror-editor
+      v-model="code"
+      merge
+      :option="{
                     orig:origin || '',
                     origRight:origin || '',
                     mode:'text/html',
                     theme:'monokai',
                 }"/>
-    </demo-card>
+  </demo-card>
 </template>
 
 <script>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
 
-    import 'codemirror/addon/merge/merge.js'
-    import 'codemirror/addon/merge/merge.css'
+  window.CodeMirror = CodeMirror
 
-    import 'codemirror/theme/monokai.css'
+  import 'codemirror/addon/merge/merge.js'
+  import 'codemirror/addon/merge/merge.css'
 
-    import DiffMatchPatch from 'diff-match-patch'
+  import 'codemirror/theme/monokai.css'
 
-    window.diff_match_patch = DiffMatchPatch
-    window.DIFF_DELETE = -1
-    window.DIFF_INSERT = 1
-    window.DIFF_EQUAL = 0
+  import DiffMatchPatch from 'diff-match-patch'
 
-    const code =
-        `<!DOCTYPE html>
+  window.diff_match_patch = DiffMatchPatch
+  window.DIFF_DELETE = -1
+  window.DIFF_INSERT = 1
+  window.DIFF_EQUAL = 0
+
+  const code =
+    `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -45,8 +52,8 @@
 </html>`
 
 
-    const origin =
-        `<!DOCTYPE html>
+  const origin =
+    `<!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="GBK">
@@ -63,30 +70,31 @@
     </body>
 </html>`
 
-    export default {
-        name: "demo6-merge",
-        data() {
-            return {
-                code,
-                origin,
-            }
-        },
-    }
+  export default {
+    name: "demo6-merge",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {
+        code,
+        origin,
+      }
+    },
+  }
 </script>
 
 <style lang="scss">
-    .demo6-merge {
-        .CodeMirror-merge-pane {
-            height: 100%;
+  .demo6-merge {
+    .CodeMirror-merge-pane {
+      height: 100%;
 
-            & > div {
-                height: 100%;
-            }
-        }
-
-        .CodeMirror-merge-r-chunk {
-            background-color: rgba(255, 7, 178, 0.16);
-            border: none;
-        }
+      & > div {
+        height: 100%;
+      }
     }
+
+    .CodeMirror-merge-r-chunk {
+      background-color: rgba(255, 7, 178, 0.16);
+      border: none;
+    }
+  }
 </style>

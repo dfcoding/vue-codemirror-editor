@@ -1,21 +1,27 @@
 <template>
-    <demo-card title="<code> Theme: monokai, Mode: text/x-vue" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo3-vue.vue">
-        <vue-codemirror-editor
-                v-model="code"
-                :option="{
+  <demo-card title="<code> Theme: monokai, Mode: text/x-vue" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo3-vue.vue">
+    <vue-codemirror-editor
+      v-model="code"
+      :option="{
                     mode:'text/x-vue',
                     theme:'monokai',
                 }"/>
-    </demo-card>
+  </demo-card>
 </template>
 
 <script>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
 
-    import 'codemirror/mode/vue/vue'
-    import 'codemirror/theme/monokai.css'
+  window.CodeMirror = CodeMirror
+  import 'codemirror/mode/vue/vue'
+  import 'codemirror/theme/monokai.css'
 
-    const code =
-        `<template>
+  const code =
+    `<template>
     <div class="vue-codemirror-editor">
     </div>
 </template>
@@ -72,14 +78,15 @@
 </style>
 `
 
-    export default {
-        name: "demo3-vue",
-        data() {
-            return {
-                code,
-            }
-        },
-    }
+  export default {
+    name: "demo3-vue",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {
+        code,
+      }
+    },
+  }
 </script>
 
 <style lang="scss">

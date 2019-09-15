@@ -1,20 +1,27 @@
 <template>
-    <demo-card title="<code> Theme: base16-dark, Mode: text/html" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo2-theme.vue">
-        <vue-codemirror-editor
-                v-model="code"
-                :option="{
+  <demo-card title="<code> Theme: base16-dark, Mode: text/html" href="https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo2-theme.vue">
+    <vue-codemirror-editor
+      v-model="code"
+      :option="{
                     theme:'base16-dark',
                     mode:'text/html',
                 }"/>
-    </demo-card>
+  </demo-card>
 </template>
 
 <script>
+  import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import CodeMirror from 'codemirror'
+  import 'codemirror/lib/codemirror.css'
+  import 'codemirror/mode/htmlmixed/htmlmixed'
+  import 'codemirror/addon/selection/active-line.js'
 
-    import 'codemirror/theme/base16-dark.css'
+  window.CodeMirror = CodeMirror
 
-    const code =
-        `<!DOCTYPE html>
+  import 'codemirror/theme/base16-dark.css'
+
+  const code =
+    `<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
@@ -32,14 +39,15 @@
 </body>
 </html>`
 
-    export default {
-        name: "demo2-theme",
-        data() {
-            return {
-                code,
-            }
-        },
-    }
+  export default {
+    name: "demo2-theme",
+    components: {VueCodemirrorEditor},
+    data() {
+      return {
+        code,
+      }
+    },
+  }
 </script>
 
 <style lang="scss">
