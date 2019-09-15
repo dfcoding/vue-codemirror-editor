@@ -41,6 +41,6 @@ new Vue({
 
 [Github Page](https://martsforever.github.io/vue-codemirror-editor/)
 
-# [Asynchronous Initialization And Code Split](https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo7-async-initialized.vue)
+[Asynchronous Initialization And Code Split](https://github.com/martSforever/vue-codemirror-editor/blob/master/example/demo/demo7-async-initialized.vue)
 
 
