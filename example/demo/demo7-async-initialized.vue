@@ -74,7 +74,7 @@
           window.DIFF_EQUAL = 0
 
           this.VueCodemirrorEditor = VueCodemirrorEditor
-        })
+        }, 'vue-codemirror-editor')
       },
     }
   }
