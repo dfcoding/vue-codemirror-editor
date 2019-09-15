@@ -1,6 +1,6 @@
 {
   "name": "vue-codemirror-editor",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "vue component base on codemirror",
   "author": "martsforever <martsforever@aliyun.com>",
   "main": "dist/vue-codemirror-editor.js",
