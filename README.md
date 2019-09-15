@@ -16,9 +16,25 @@ npm i vue-codemirror-editor -S
 
 ```javascript
 import Vue from 'vue'
+
+/*must import CodeMirror before import App.vue, because you have to import codemirror.js before modes or addons such as merge.js*/
 import VueCodemirrorEditor from 'vue-codemirror-editor'
+import CodeMirror from 'codemirror'
+import 'codemirror/mode/htmlmixed/htmlmixed'
+import 'codemirror/addon/selection/active-line.js'
+
+import 'codemirror/lib/codemirror.css'
 import 'vue-codemirror-editor/dist/vue-codemirror-editor.css'
-Vue.use(VueCodemirrorEditor)
+
+import App from './App.vue'
+
+window.CodeMirror = CodeMirror
+Vue.component(VueCodemirrorEditor.name, VueCodemirrorEditor)
+
+new Vue({
+    render: h => h(App),
+}).$mount('#app')
+
 ```
 
 # More Example
