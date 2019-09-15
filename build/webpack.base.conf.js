@@ -26,7 +26,7 @@ module.exports = {
     alias: {
       '@': resolve('src'),
       'src': resolve('src'),
-      'vue-codemirror-editor': resolve('src/index.js')
+      'vue-codemirror-editor': resolve('src'),
     }
   },
   module: {

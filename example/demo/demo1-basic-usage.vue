@@ -5,8 +5,9 @@
 </template>
 
 <script>
-
   import VueCodemirrorEditor from 'vue-codemirror-editor'
+  import 'vue-codemirror-editor/dist/vue-codemirror-editor.css'
+
   import CodeMirror from 'codemirror'
   import 'codemirror/lib/codemirror.css'
   import 'codemirror/mode/htmlmixed/htmlmixed'
