@@ -56,7 +56,8 @@
           const CodeMirror = require('codemirror')
           window.CodeMirror = CodeMirror
 
-          const VueCodemirrorEditor = require('vue-codemirror-editor').default
+          let VueCodemirrorEditor = require('vue-codemirror-editor')
+          VueCodemirrorEditor = VueCodemirrorEditor.default || VueCodemirrorEditor
           require('codemirror/mode/htmlmixed/htmlmixed')
           require('codemirror/addon/selection/active-line.js')
           require('codemirror/lib/codemirror.css')
