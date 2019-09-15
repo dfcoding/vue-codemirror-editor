@@ -31,6 +31,7 @@
         <demo4-java/>
         <demo5-xml/>
         <demo6-merge/>
+        <demo7-async-initialized/>
       </div>
     </div>
     <div class="app-foot">
@@ -49,10 +50,11 @@
   import Demo4Java from "./demo/demo4-java";
   import Demo5Xml from "./demo/demo5-xml";
   import Demo6Merge from "./demo/demo6-merge";
+  import Demo7AsyncInitialized from "./demo/demo7-async-initialized";
 
   export default {
     name: 'app',
-    components: {Demo6Merge, Demo5Xml, Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
+    components: {Demo7AsyncInitialized, Demo6Merge, Demo5Xml, Demo4Java, Demo3Vue, Demo2Theme, Demo1BasicUsage},
   }
 </script>
 
